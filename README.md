@@ -6,7 +6,7 @@ This library is based on code from:
 https://github.com/RobTillaart/MCP23S17
 
 
-But the changes in design and details is large enough to make me choose to make it independent and not simply a fork.
+The changes in design and details are large enough to make me choose to make it independent and not simply a fork.
 
 The main change I saw needed was the encapsulation of the SPI details out of the library, so that the code could be used in a non-Arduino project, as was the case I was working on, using the RaspberryPi Pico SDK.
 
