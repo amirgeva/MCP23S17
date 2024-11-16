@@ -23,6 +23,17 @@ namespace ispi
             gpio_set_dir(_cs_pin, GPIO_OUT);
             gpio_put(_cs_pin, 1);
         }
+
+        PicoHardwareSPI::PicoHardwareSPI(PicoHardwareSPI& shared, int alternative_cs)
+        : _cs_pin(alternative_cs)
+        , _hardware(shared._hardware)
+        , _speed(shared._speed)
+        , _order(shared._order)
+        , _policy(shared._policy)
+        {
+            gpio_set_dir(_cs_pin, GPIO_OUT);
+            gpio_put(_cs_pin, 1);
+        }
     
         void PicoHardwareSPI::start()
         {

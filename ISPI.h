@@ -46,6 +46,5 @@ namespace ispi
         virtual void stop() = 0;
     };
 
-    SPI* create_hardware_spi(int spi_instance, uint32_t speed, int sck, int mosi, int miso, int cs);
 
 }

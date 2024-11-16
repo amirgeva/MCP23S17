@@ -10,7 +10,7 @@ set(LIB_DEPS "")
 
 if (DEFINED PICO_BOARD)
 	set(SOURCES ${SOURCES} platform/pico.cpp)
-	set(LIB_DEPS hardware_spi)
+	set(LIB_DEPS hardware_spi pico_runtime)
 endif()
 
 add_library(MCP23S17 STATIC ${SOURCES})
